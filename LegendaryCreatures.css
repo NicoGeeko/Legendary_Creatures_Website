@@ -1,19 +1,73 @@
+:root {    
+     --moonStoneColor: #e24097;
+     --goldCircleColor: #ffeb57;
+     --fontPrimary :'urbanist',sans-serif;
+     --fontTitle : 'libre baskerville', serif;
+     --spaceBetweenLink : 2%;
+}
+
 body{
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontPrimary);
+    font-weight: bold;
 }
 
 h1{
-    font-family:'libre baskerville' ;
+    font-family: var(--fontTitle) ;
     text-align: center;
-    color: blueviolet;
-    
+    color: var(--moonStoneColor);
 }
 
-.container {
+/* BARRE DE NAVIGATION */
+
+.navBar {
+    height: 100px;
+    background-color: black;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: var(--goldCircleColor) solid 3px;
 }
-.container img {
-    height: 500px;
+
+.navBar img{
+    height: 95%;
+    width: auto;
+}
+
+.navBar a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    margin: var(--spaceBetweenLink);
+
+}
+
+.navBar a.active {
+    color: var(--moonStoneColor);
+}
+
+.navBar a:hover {
+    color: var(--goldCircleColor);
+}
+
+footer{
+    display: flex;
+    height: 50px;
+    background-color: black; 
+    border-top: var(--goldCircleColor) solid 3px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: var(--spaceBetweenLink);
+}
+
+footer a:hover {
+    color: var(--goldCircleColor);
 }
