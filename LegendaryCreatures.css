@@ -16,13 +16,13 @@ body, html {
     justify-content: space-between;
 }
 .landscape{
-    background-image: url('./Images/Landscape_Background_Light.svg');
+    background-image: url('./Images/Landscape_Background_Light.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .Parchment {
-    background-image: url('./Images/Parchment_Background.svg');
+    background-image: url('./Images/Parchment_Background.webp');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -102,26 +102,13 @@ footer a:hover {
 .container {
     display: grid;
     grid-template-columns: repeat(3,1fr); 
-    grid-template-rows: 1fr;
-    width: 100% ;
+    grid-template-rows: auto;
+    height: 100%;
+
+
 }
 
-#mainLogo{
-    grid-column: 2;
-    filter: drop-shadow(0 0 5px black); 
-}
-
-#cardOfTheMonth{
-    grid-column: 3;
-    background-color: rgba(0, 0, 0, 0.6); 
-    border: var(--goldCircleColor) solid 3px;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    margin: 5%;
-}
-
-#reportTournament{
+.gridColumn1{
     grid-column: 1;
     background-color: rgba(0, 0, 0, 0.6); 
     border: var(--goldCircleColor) solid 3px;
@@ -130,6 +117,25 @@ footer a:hover {
     font-size: 1.2em;
     margin: 5%;
 }
+
+.gridColumn2{
+    grid-column: 2;
+    filter: drop-shadow(0 0 5px black); 
+    background-color: rgba(0, 0, 0, 0.5);
+    align-content: center;
+   }
+
+.gridColumn3{
+    grid-column: 3;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: var(--goldCircleColor) solid 3px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5%;
+}
+
+
 
 /* Créatures Illustrations Encadrement */
 
@@ -137,14 +143,20 @@ footer a:hover {
     grid-column: 1;
     padding: 15%;
     filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.7))
-
 }
 
 .creaturesRight{
     grid-column: 3;
     padding: 15%;
     filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.5))
-
 }
 
-/*background-color: rgba(0, 0, 0, 0.6); */
+#placement {
+    height: 80%;
+    width: 80%;
+    background-color: var(--moonStoneColor);
+    border: var(--goldCircleColor) solid 3px;
+    border-radius: 5%;
+    padding: 5%;
+    align-self: center;
+}
