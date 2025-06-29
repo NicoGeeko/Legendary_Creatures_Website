@@ -24,9 +24,13 @@ body, html {
 
 .Parchment {
     background-image: url('./Images/Parchment_Background.webp');
-    background-size: cover;
+    background-attachment: fixed;;
     background-repeat: no-repeat;
 
+}
+
+.darkBackground {
+    background-color: black;
 }
 
 
@@ -49,6 +53,12 @@ h2{
     align-items: center;
     justify-content: space-around;
     border-bottom: var(--goldCircleColor) solid 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
 .navBar img{
@@ -62,6 +72,8 @@ h2{
     text-decoration: none;
     justify-content: space-around;
     margin: var(--spaceBetweenLink);
+    
+    
 
 }
 
@@ -84,6 +96,11 @@ footer{
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
 }
 
 footer a {
@@ -138,26 +155,67 @@ footer a:hover {
 
 
 
-/* Créatures Illustrations Encadrement */
+/* BOUTONS CREATURES */
 
-.creaturesLeft{
-    grid-column: 1;
-    padding: 15%;
-    filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.7))
+.imageButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 200px;
 }
 
-.creaturesRight{
-    grid-column: 3;
-    padding: 15%;
-    filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.5))
+.imageButton img {
+  display: block; 
+  width: 100%;
+  height: auto;
 }
 
-#placement {
-    height: 80%;
-    width: 80%;
-    background-color: var(--moonStoneColor);
-    border: var(--goldCircleColor) solid 3px;
-    border-radius: 5%;
-    padding: 5%;
+
+/* CONTAINER DU FILTRE BOUTONS */
+
+.bestiaryFilter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    background-color: black;
+    gap :10px;
+    margin-top: 102px;
+    height: 1OOpx;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Container de Cartes */
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     align-self: center;
+    margin-top: 220px;
+}
+
+
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.illustationLeft{
+    grid-column: 1;
+    height :500px;
+    top: 30%;
+    position: sticky;
+
+   
+}
+
+.illustationRight{
+    grid-column: 5 ;
+    height :500px;
+    top: 30%;
+    position: sticky;
 }
